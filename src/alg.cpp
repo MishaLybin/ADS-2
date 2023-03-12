@@ -23,16 +23,17 @@ uint64_t fact(uint16_t n) {
 }
 
 double calcItem(double x, uint16_t n) {
-  int i=0;
+  int s;
   double d=1;
-  double e=0.0;
-
-
-  while (i<n){
-    d=d*x/n;
-    e=1+e*d;
-    cout << e<<endl;
-    i++;}
+  if(n<1000000){
+    return 1;
+  }
+  else{
+    for(i=0;i<n;i++){
+      s+=1/pow(n,x);
+    cout << s <<endl;}
+  }
+  return 0;
 }
 
 double expn(double x, uint16_t count) {
