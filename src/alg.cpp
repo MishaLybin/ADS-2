@@ -5,19 +5,16 @@
 
 
 double pown(double value, uint16_t n) {
-  double answer = 1;
+  double result = 1;
     if (value == -1) {
-      if (n % 2 == 0)
-        return 1;
-      else
-        return -1;
+        if (n % 2 == 0)
+            return 1;
+        else
+            return -1;
     }
-    double result = value;
-    for (uint64_t i=1; i <= n; i++) {
-      result *= value;
-    }
+    for (uint16_t i = 1; i <= n; ++i)
+        result *= value;
     return result;
-  }
 }
 
 uint64_t fact(uint16_t n) {
