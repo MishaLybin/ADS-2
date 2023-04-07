@@ -39,7 +39,7 @@ double sinn(double x, uint16_t count) {
 }
 
 double cosn(double x, uint16_t count) {
-  double result = 0;
+  double result = 1;
   for (uint64_t i = 2; i <= count; i++)
     result += pown(-1, i-1) * calcItem(x, 2 * i - 2);
   return result;
