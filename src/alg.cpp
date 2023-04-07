@@ -5,12 +5,16 @@
 
 
 double pown(double value, uint16_t n) {
-  if (n == 0) {
-    return 1;
-  } else {
+  double answer = 1;
+    if (value == -1) {
+      if (n % 2 == 0)
+        return 1;
+      else
+        return -1;
+    }
     double result = value;
     for (uint64_t i=1; i <= n; i++) {
-    result *= value;
+      result *= value;
     }
     return result;
   }
